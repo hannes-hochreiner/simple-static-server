@@ -1,0 +1,21 @@
+Name: simple-static-server
+Summary: Simple server for static website with auto-shutdown.
+License: MIT
+Version: 1.0.0
+Release: 1%{?dist}
+Source: simple-static-server-1.0.0.tar.gz
+Requires: nodejs
+
+%description
+Simple server for static websites with auto-shutdown.
+
+%prep
+%autosetup -n simple-static-server
+
+%install
+mkdir %{buildroot}/opt
+cp -r %{_builddir}/simple-static-server %{buildroot}/opt
+
+%files
+%defattr (-,root,root,-)
+/opt/simple-static-server

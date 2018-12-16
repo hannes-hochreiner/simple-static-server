@@ -5,6 +5,7 @@
   "main": "bld/index.js",
   "scripts": {
     "build": "babel src -d lib",
+    "package": "scripts/package.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.0"
+    "@babel/preset-env": "^7.2.0",
+    "json": "^9.0.6"
   }
 }
